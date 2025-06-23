@@ -1,0 +1,15 @@
+{
+  "document_path": "./data/Drivers_licence/generated_license_1108.png",
+  "document_type": "driving_license",
+  "extracted_data": {
+    "name": "Pollard James",
+    "date_of_birth": "1984-09-16",
+    "license_number": "JU7BTX591FJU",
+    "issuing_state": null,
+    "expiry_date": null
+  },
+  "confidence_score": 60.0,
+  "processing_time": 7.368260145187378,
+  "error": null,
+  "validation_status": "success"
+}

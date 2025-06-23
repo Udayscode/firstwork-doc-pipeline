@@ -1,0 +1,16 @@
+{
+  "document_path": "./data/shop_reciepts/11.jpg",
+  "document_type": "resume",
+  "extracted_data": {
+    "full_name": null,
+    "email": null,
+    "phone_number": null,
+    "skills": [],
+    "work_experience": [],
+    "education": []
+  },
+  "confidence_score": 0.0,
+  "processing_time": 8.01412320137024,
+  "error": "RetryError[<Future at 0x7f515fa6a6e0 state=finished raised FileNotFoundError>]",
+  "validation_status": "failed"
+}

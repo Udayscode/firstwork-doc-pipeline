@@ -1,0 +1,7 @@
+google-generativeai
+Pillow
+PyMuPDF
+opencv-python
+tesseract
+numpy
+tenacity

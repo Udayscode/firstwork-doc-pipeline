@@ -1,0 +1,86 @@
+{
+  "document_path": "./data/shop_receipts/10.jpg",
+  "document_type": "shop_receipt",
+  "extracted_data": {
+    "merchant_name": "SPAR",
+    "total_amount": 338.16,
+    "date_of_purchase": "2021-02-23",
+    "items": [
+      {
+        "name": "LAZENBY WORCESTER SAUCE",
+        "quantity": 1,
+        "price": 17.99
+      },
+      {
+        "name": "MILKY BAR CHOC",
+        "quantity": 1,
+        "price": 16.99
+      },
+      {
+        "name": "SMOKED VIENNAS",
+        "quantity": 1,
+        "price": 33.99
+      },
+      {
+        "name": "PEALED PEACHES",
+        "quantity": 1,
+        "price": 82.99
+      },
+      {
+        "name": "MEDITERRANEAN MIX",
+        "quantity": 1,
+        "price": 44.99
+      },
+      {
+        "name": "SPAR COOKING OIL",
+        "quantity": 1,
+        "price": 14.99
+      },
+      {
+        "name": "F/L ENGLISH CUCUMB",
+        "quantity": 1,
+        "price": 12.99
+      },
+      {
+        "name": "NESTLE AERO",
+        "quantity": 1,
+        "price": 20.99
+      },
+      {
+        "name": "CADBURY DAIRY MI",
+        "quantity": 1,
+        "price": 16.99
+      },
+      {
+        "name": "GRAPES MIXED TUB",
+        "quantity": 1,
+        "price": 24.99
+      },
+      {
+        "name": "TASTIC RICE",
+        "quantity": 1,
+        "price": 11.99
+      },
+      {
+        "name": "BLACK CAT SMOOTH",
+        "quantity": 1,
+        "price": 27.99
+      },
+      {
+        "name": "CARRIER BAG 24L",
+        "quantity": 1,
+        "price": 0.75
+      },
+      {
+        "name": "BANANAS LOOSE",
+        "quantity": 0.596,
+        "price": 9.53
+      }
+    ],
+    "payment_method": "Nedbank"
+  },
+  "confidence_score": 100.0,
+  "processing_time": 11.474626541137695,
+  "error": null,
+  "validation_status": "success"
+}

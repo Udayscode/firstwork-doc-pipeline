@@ -1,0 +1,80 @@
+{
+  "document_path": "./data/Resume/50654827-4828.jpg",
+  "document_type": "resume",
+  "extracted_data": {
+    "full_name": "Jay Rappaport",
+    "email": null,
+    "phone_number": null,
+    "skills": [
+      "Research",
+      "Microbiology",
+      "Molecular Virology",
+      "Tumor Cell Biology",
+      "Immunology",
+      "Genetics"
+    ],
+    "work_experience": [
+      {
+        "company": "Wistar Institute of Anatomy and Biology",
+        "role": "Research Technician",
+        "dates": "1979-1981"
+      },
+      {
+        "company": "University of Pennsylvania",
+        "role": "Graduate Student",
+        "dates": "1981-1986"
+      },
+      {
+        "company": "National Cancer Institute",
+        "role": "Staff Fellow",
+        "dates": "1987"
+      },
+      {
+        "company": "National Cancer Institute",
+        "role": "Staff Fellow",
+        "dates": "1987-1989"
+      },
+      {
+        "company": "UCSD",
+        "role": "Assistant Research Microbiologist",
+        "dates": "1990-1991"
+      },
+      {
+        "company": "George Washington University",
+        "role": "Assistant Research Professor",
+        "dates": "1992"
+      },
+      {
+        "company": "National Institute of Dental Research",
+        "role": "Special Volunteer",
+        "dates": "1992-1994"
+      },
+      {
+        "company": "National Institute of Dental Research",
+        "role": "Senior Staff Fellow",
+        "dates": "1992-1994"
+      },
+      {
+        "company": "Mount Sinai Medical Center",
+        "role": "Associate Professor",
+        "dates": "1994-present"
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Pennsylvania",
+        "degree": "BA",
+        "graduation_year": 1979
+      },
+      {
+        "institution": "University of Pennsylvania",
+        "degree": "Ph.D.",
+        "graduation_year": 1986
+      }
+    ]
+  },
+  "confidence_score": 66.66666666666666,
+  "processing_time": 9.99643063545227,
+  "error": null,
+  "validation_status": "success"
+}

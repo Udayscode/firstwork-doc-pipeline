@@ -1,0 +1,65 @@
+{
+  "document_path": "./data/Resume/50630631-0632.jpg",
+  "document_type": "resume",
+  "extracted_data": {
+    "full_name": "Jay A. Glasel",
+    "email": null,
+    "phone_number": null,
+    "skills": [
+      "Biochemistry",
+      "Spectroscopy",
+      "Chemical Physics",
+      "Fluorescence Microscopy",
+      "Confocal Microscopy",
+      "Molecular Modelling"
+    ],
+    "work_experience": [
+      {
+        "company": "UCHC",
+        "role": "Prof.",
+        "dates": "1975"
+      },
+      {
+        "company": "UCHC",
+        "role": "Assoc. Prof.",
+        "dates": "1970"
+      },
+      {
+        "company": "Columbia Univ.",
+        "role": "Asst. Prof.",
+        "dates": "1964"
+      },
+      {
+        "company": "Active Duty, U.S. Air Force",
+        "role": "1st Lt.",
+        "dates": "1962-1964"
+      }
+    ],
+    "education": [
+      {
+        "institution": "Calif. Inst. of Technology",
+        "degree": "B.S.",
+        "graduation_year": 1955
+      },
+      {
+        "institution": "Univ. of Chicago",
+        "degree": "Ph.D.",
+        "graduation_year": 1960
+      },
+      {
+        "institution": "Univ. of Calif., San Diego",
+        "degree": "Postdoc.",
+        "graduation_year": null
+      },
+      {
+        "institution": "Imperial College, London, UK",
+        "degree": "Postdoc.",
+        "graduation_year": null
+      }
+    ]
+  },
+  "confidence_score": 66.66666666666666,
+  "processing_time": 9.709962606430054,
+  "error": null,
+  "validation_status": "success"
+}

@@ -1,0 +1,15 @@
+{
+  "document_path": "./data/Drivers_licence/generated_license_0.png",
+  "document_type": "driving_license",
+  "extracted_data": {
+    "name": "Collins Aaron",
+    "date_of_birth": "1956-10-09",
+    "license_number": "MKWMJ089",
+    "issuing_state": "IRELAND",
+    "expiry_date": null
+  },
+  "confidence_score": 80.0,
+  "processing_time": 5.700598955154419,
+  "error": null,
+  "validation_status": "success"
+}

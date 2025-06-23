@@ -1,0 +1,15 @@
+{
+  "document_path": "./data/Drivers_licence/generated_license_1.png",
+  "document_type": "driving_license",
+  "extracted_data": {
+    "name": "Anderson Michael",
+    "date_of_birth": "1993-02-19",
+    "license_number": "EHMGBARC3",
+    "issuing_state": "DANISH",
+    "expiry_date": null
+  },
+  "confidence_score": 80.0,
+  "processing_time": 5.965301275253296,
+  "error": null,
+  "validation_status": "success"
+}

@@ -1,0 +1,497 @@
+#!/usr/bin/env python3
+"""
+FirstWork Document Processing System
+A production-ready document understanding pipeline using Google Gemini API
+"""
+
+import os
+import json
+import logging
+import argparse
+import time
+from typing import Dict, List, Optional, Any, Union
+from pathlib import Path
+from dataclasses import dataclass, asdict
+from datetime import datetime
+import base64
+import mimetypes
+
+# Third-party imports
+import google.generativeai as genai
+from PIL import Image
+import fitz  # PyMuPDF for PDF processing
+import easyocr
+import cv2
+import numpy as np
+from tenacity import retry, stop_after_attempt, wait_exponential
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('document_processor.log'),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
+
+
+@dataclass
+class ProcessingResult:
+    """Result of document processing"""
+    document_path: str
+    document_type: str
+    extracted_data: Dict[str, Any]
+    confidence_score: float
+    processing_time: float
+    error: Optional[str] = None
+    validation_status: str = "success"
+
+
+class DocumentType:
+    """Document type definitions and schemas"""
+    
+    DRIVING_LICENSE = "driving_license"
+    SHOP_RECEIPT = "shop_receipt"
+    RESUME = "resume"
+    
+    SCHEMAS = {
+        DRIVING_LICENSE: {
+            "name": "string",
+            "date_of_birth": "YYYY-MM-DD",
+            "license_number": "string",
+            "issuing_state": "string",
+            "expiry_date": "YYYY-MM-DD"
+        },
+        SHOP_RECEIPT: {
+            "merchant_name": "string",
+            "total_amount": "float",
+            "date_of_purchase": "YYYY-MM-DD",
+            "items": [{"name": "string", "quantity": "int", "price": "float"}],
+            "payment_method": "string"
+        },
+        RESUME: {
+            "full_name": "string",
+            "email": "string",
+            "phone_number": "string",
+            "skills": ["string"],
+            "work_experience": [{"company": "string", "role": "string", "dates": "string"}],
+            "education": [{"institution": "string", "degree": "string", "graduation_year": "int"}]
+        }
+    }
+
+
+class PromptManager:
+    """Manages prompts for different document types"""
+    
+    @staticmethod
+    def get_system_prompt() -> str:
+        return """You are an expert document processing AI specialized in extracting structured data from various document types.
+        
+            Key Requirements:
+            1. Extract ONLY the requested fields with high accuracy
+            2. Return valid JSON format without any markdown formatting
+            3. Use null for missing information
+            4. Maintain data type consistency (strings, numbers, arrays)
+            5. Handle edge cases gracefully
+            6. Be conservative - if unsure, use null rather than guessing
+            7. For dates, use YYYY-MM-DD format
+            8. For arrays, ensure proper JSON array structure"""
+    
+    @staticmethod
+    def get_document_prompt(doc_type: str, schema: Dict) -> str:
+        """Generate document-specific extraction prompt"""
+        
+        prompts = {
+            DocumentType.DRIVING_LICENSE: f"""
+                Extract the following information from this driving license:
+                {json.dumps(schema, indent=2)}
+
+                Focus on:
+                - Full legal name as printed
+                - Birth date in YYYY-MM-DD format
+                - Complete license number including letters/numbers
+                - State that issued the license
+                - Expiration date in YYYY-MM-DD format
+
+                Return only valid JSON without markdown formatting.
+                """,
+            
+            DocumentType.SHOP_RECEIPT: f"""
+                Extract the following information from this shop receipt:
+                {json.dumps(schema, indent=2)}
+
+                Focus on:
+                - Store/merchant name (not address)
+                - Final total amount as number
+                - Purchase date in YYYY-MM-DD format
+                - Individual items with names, quantities, and prices
+                - Payment method (cash, card, etc.)
+
+                For items array, include each product with quantity and unit price.
+                Return only valid JSON without markdown formatting.
+                """,
+            
+            DocumentType.RESUME: f"""
+                Extract the following information from this resume/CV:
+                {json.dumps(schema, indent=2)}
+
+                Focus on:
+                - Complete full name
+                - Primary email address
+                - Primary phone number
+                - Technical and professional skills as array
+                - Work experience with company, role, and date ranges
+                - Education with institution, degree, and graduation year
+
+                For arrays, ensure proper JSON structure. Use null for missing data.
+                Return only valid JSON without markdown formatting.
+                """
+        }
+        
+        return prompts.get(doc_type, "Extract structured data from this document.")
+
+
+class ImageProcessor:
+    """Handles image preprocessing and OCR"""
+    
+    def __init__(self):
+        self.ocr_reader = easyocr.Reader(['en'])
+    
+    def preprocess_image(self, image_path: str) -> np.ndarray:
+        """Preprocess image for better OCR results"""
+        try:
+            image = cv2.imread(image_path)
+            if image is None:
+                raise ValueError(f"Could not load image: {image_path}")
+            
+            # Convert to grayscale
+            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+            
+            # Enhance contrast
+            clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8,8))
+            enhanced = clahe.apply(gray)
+            
+            # Denoise
+            denoised = cv2.fastNlMeansDenoising(enhanced)
+            
+            return denoised
+            
+        except Exception as e:
+            logger.error(f"Error preprocessing image {image_path}: {e}")
+            return cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
+    
+    def extract_text(self, image_path: str) -> str:
+        """Extract text using OCR"""
+        try:
+            processed_image = self.preprocess_image(image_path)
+            results = self.ocr_reader.readtext(processed_image)
+            
+            # Extract text with confidence filtering
+            text_lines = []
+            for (bbox, text, confidence) in results:
+                if confidence > 0.5:  # Filter low confidence detections
+                    text_lines.append(text.strip())
+            
+            return '\n'.join(text_lines)
+            
+        except Exception as e:
+            logger.error(f"Error extracting text from {image_path}: {e}")
+            return ""
+
+
+class DocumentProcessor:
+    """Main document processing class"""
+    
+    def __init__(self, api_key: str):
+        """Initialize with Gemini API key"""
+        self.api_key = api_key
+        genai.configure(api_key=api_key)
+        self.model = genai.GenerativeModel('gemini-1.5-flash')
+        self.image_processor = ImageProcessor()
+        self.prompt_manager = PromptManager()
+        
+    def _detect_document_type(self, file_path: str) -> str:
+        """Detect document type from file path"""
+        path_parts = Path(file_path).parts
+        
+        if 'driving_license' in path_parts:
+            return DocumentType.DRIVING_LICENSE
+        elif 'shop_receipts' in path_parts:
+            return DocumentType.SHOP_RECEIPT
+        elif 'resumes' in path_parts:
+            return DocumentType.RESUME
+        else:
+            # Fallback: try to detect from filename
+            filename = Path(file_path).name.lower()
+            if 'license' in filename or 'dl' in filename:
+                return DocumentType.DRIVING_LICENSE
+            elif 'receipt' in filename or 'invoice' in filename:
+                return DocumentType.SHOP_RECEIPT
+            elif 'resume' in filename or 'cv' in filename:
+                return DocumentType.RESUME
+            
+        return DocumentType.RESUME  # Default fallback
+    
+    def _convert_pdf_to_images(self, pdf_path: str) -> List[str]:
+        """Convert PDF pages to images"""
+        try:
+            doc = fitz.open(pdf_path)
+            image_paths = []
+            
+            for page_num in range(len(doc)):
+                page = doc.load_page(page_num)
+                pix = page.get_pixmap(matrix=fitz.Matrix(2, 2))  # 2x scaling
+                
+                output_path = f"{pdf_path}_page_{page_num}.png"
+                pix.save(output_path)
+                image_paths.append(output_path)
+            
+            doc.close()
+            return image_paths
+            
+        except Exception as e:
+            logger.error(f"Error converting PDF {pdf_path}: {e}")
+            return []
+    
+    def _encode_image(self, image_path: str) -> str:
+        """Encode image to base64"""
+        try:
+            with open(image_path, "rb") as image_file:
+                return base64.b64encode(image_file.read()).decode('utf-8')
+        except Exception as e:
+            logger.error(f"Error encoding image {image_path}: {e}")
+            return ""
+    
+    @retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=4, max=10))
+    def _call_gemini(self, prompt: str, image_path: str) -> str:
+        """Call Gemini API with retry logic"""
+        try:
+            # Prepare image
+            image = Image.open(image_path)
+            
+            # Call Gemini
+            response = self.model.generate_content([prompt, image])
+            
+            if response.text:
+                return response.text.strip()
+            else:
+                raise ValueError("Empty response from Gemini")
+                
+        except Exception as e:
+            logger.error(f"Gemini API call failed: {e}")
+            raise
+    
+    def _validate_and_clean_json(self, raw_output: str, doc_type: str) -> Dict[str, Any]:
+        """Validate and clean JSON output"""
+        try:
+            # Remove markdown formatting if present
+            if raw_output.startswith('```json'):
+                raw_output = raw_output[7:-3]
+            elif raw_output.startswith('```'):
+                raw_output = raw_output[3:-3]
+            
+            # Parse JSON
+            data = json.loads(raw_output)
+            
+            # Basic validation against schema
+            schema = DocumentType.SCHEMAS[doc_type]
+            validated_data = {}
+            
+            for field, field_type in schema.items():
+                if field in data:
+                    validated_data[field] = data[field]
+                else:
+                    # Set default values for missing fields
+                    if isinstance(field_type, list):
+                        validated_data[field] = []
+                    else:
+                        validated_data[field] = None
+            
+            return validated_data
+            
+        except json.JSONDecodeError as e:
+            logger.error(f"JSON decode error: {e}")
+            logger.error(f"Raw output: {raw_output}")
+            return self._get_default_schema(doc_type)
+        except Exception as e:
+            logger.error(f"Validation error: {e}")
+            return self._get_default_schema(doc_type)
+    
+    def _get_default_schema(self, doc_type: str) -> Dict[str, Any]:
+        """Get default schema with null values"""
+        schema = DocumentType.SCHEMAS[doc_type]
+        default_data = {}
+        
+        for field, field_type in schema.items():
+            if isinstance(field_type, list):
+                default_data[field] = []
+            else:
+                default_data[field] = None
+        
+        return default_data
+    
+    def _calculate_confidence(self, extracted_data: Dict[str, Any], doc_type: str) -> float:
+        """Calculate confidence score based on extracted data completeness"""
+        schema = DocumentType.SCHEMAS[doc_type]
+        total_fields = len(schema)
+        filled_fields = sum(1 for value in extracted_data.values() if value is not None and value != "")
+        
+        return (filled_fields / total_fields) * 100
+    
+    def process_document(self, file_path: str) -> ProcessingResult:
+        """Process a single document"""
+        start_time = time.time()
+        
+        try:
+            logger.info(f"Processing document: {file_path}")
+            
+            # Detect document type
+            doc_type = self._detect_document_type(file_path)
+            logger.info(f"Detected document type: {doc_type}")
+            
+            # Handle PDF files
+            if file_path.lower().endswith('.pdf'):
+                image_paths = self._convert_pdf_to_images(file_path)
+                if not image_paths:
+                    raise ValueError("Could not convert PDF to images")
+                primary_image = image_paths[0]  # Use first page
+            else:
+                primary_image = file_path
+            
+            # Get prompts
+            system_prompt = self.prompt_manager.get_system_prompt()
+            doc_prompt = self.prompt_manager.get_document_prompt(doc_type, DocumentType.SCHEMAS[doc_type])
+            full_prompt = f"{system_prompt}\n\n{doc_prompt}"
+            
+            # Extract with Gemini
+            raw_output = self._call_gemini(full_prompt, primary_image)
+            
+            # Validate and clean output
+            extracted_data = self._validate_and_clean_json(raw_output, doc_type)
+            
+            # Calculate confidence
+            confidence = self._calculate_confidence(extracted_data, doc_type)
+            
+            processing_time = time.time() - start_time
+            
+            # Clean up temporary files
+            if file_path.lower().endswith('.pdf'):
+                for temp_path in image_paths:
+                    try:
+                        os.remove(temp_path)
+                    except:
+                        pass
+            
+            return ProcessingResult(
+                document_path=file_path,
+                document_type=doc_type,
+                extracted_data=extracted_data,
+                confidence_score=confidence,
+                processing_time=processing_time
+            )
+            
+        except Exception as e:
+            processing_time = time.time() - start_time
+            logger.error(f"Error processing {file_path}: {e}")
+            
+            return ProcessingResult(
+                document_path=file_path,
+                document_type=self._detect_document_type(file_path),
+                extracted_data=self._get_default_schema(self._detect_document_type(file_path)),
+                confidence_score=0.0,
+                processing_time=processing_time,
+                error=str(e),
+                validation_status="failed"
+            )
+    
+    def process_batch(self, input_dir: str, output_dir: str) -> List[ProcessingResult]:
+        """Process all documents in input directory"""
+        results = []
+        
+        # Create output directory
+        Path(output_dir).mkdir(parents=True, exist_ok=True)
+        
+        # Find all supported files
+        supported_extensions = ['.jpg', '.jpeg', '.png', '.pdf', '.tiff', '.bmp']
+        files = []
+        
+        for ext in supported_extensions:
+            files.extend(Path(input_dir).rglob(f'*{ext}'))
+            files.extend(Path(input_dir).rglob(f'*{ext.upper()}'))
+        
+        logger.info(f"Found {len(files)} documents to process")
+        
+        # Process each file
+        for file_path in files:
+            result = self.process_document(str(file_path))
+            results.append(result)
+            
+            # Save individual result
+            output_file = Path(output_dir) / f"{file_path.stem}_result.json"
+            with open(output_file, 'w') as f:
+                json.dump(asdict(result), f, indent=2, default=str)
+            
+            logger.info(f"Processed {file_path.name}: confidence={result.confidence_score:.1f}%")
+        
+        # Save batch summary
+        summary_file = Path(output_dir) / "batch_summary.json"
+        summary = {
+            "total_documents": len(results),
+            "successful": len([r for r in results if r.error is None]),
+            "failed": len([r for r in results if r.error is not None]),
+            "average_confidence": sum(r.confidence_score for r in results) / len(results) if results else 0,
+            "average_processing_time": sum(r.processing_time for r in results) / len(results) if results else 0,
+            "processed_at": datetime.now().isoformat()
+        }
+        
+        with open(summary_file, 'w') as f:
+            json.dump(summary, f, indent=2)
+        
+        return results
+
+
+def main():
+    """Main CLI interface"""
+    parser = argparse.ArgumentParser(description="FirstWork Document Processing System")
+    parser.add_argument("--api-key", required=True, help="Google Gemini API key")
+    parser.add_argument("--input", required=True, help="Input directory containing documents")
+    parser.add_argument("--output", required=True, help="Output directory for results")
+    parser.add_argument("--single", help="Process single file instead of batch")
+    parser.add_argument("--verbose", action="store_true", help="Enable verbose logging")
+    
+    args = parser.parse_args()
+    
+    if args.verbose:
+        logging.getLogger().setLevel(logging.DEBUG)
+    
+    # Initialize processor
+    processor = DocumentProcessor(args.api_key)
+    
+    if args.single:
+        # Process single file
+        result = processor.process_document(args.single)
+        output_file = Path(args.output) / f"{Path(args.single).stem}_result.json"
+        Path(args.output).mkdir(parents=True, exist_ok=True)
+        
+        with open(output_file, 'w') as f:
+            json.dump(asdict(result), f, indent=2, default=str)
+        
+        print(f"Processed {args.single}")
+        print(f"Confidence: {result.confidence_score:.1f}%")
+        print(f"Output: {output_file}")
+    else:
+        # Process batch
+        results = processor.process_batch(args.input, args.output)
+        
+        print(f"\nBatch Processing Complete!")
+        print(f"Total documents: {len(results)}")
+        print(f"Successful: {len([r for r in results if r.error is None])}")
+        print(f"Failed: {len([r for r in results if r.error is not None])}")
+        print(f"Average confidence: {sum(r.confidence_score for r in results) / len(results):.1f}%")
+        print(f"Results saved to: {args.output}")
+
+
+if __name__ == "__main__":
+    main()

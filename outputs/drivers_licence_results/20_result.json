@@ -1,0 +1,15 @@
+{
+  "document_path": "./data/shop_receipts/20.jpg",
+  "document_type": "shop_receipt",
+  "extracted_data": {
+    "merchant_name": null,
+    "total_amount": null,
+    "date_of_purchase": null,
+    "items": [],
+    "payment_method": null
+  },
+  "confidence_score": 0.0,
+  "processing_time": 8.01387357711792,
+  "error": "RetryError[<Future at 0x7f173744e830 state=finished raised FileNotFoundError>]",
+  "validation_status": "failed"
+}
