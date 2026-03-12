@@ -1,0 +1,16 @@
+{
+  "document_path": "./data/driving_licence/generated_licence_1.png",
+  "document_type": "resume",
+  "extracted_data": {
+    "full_name": null,
+    "email": null,
+    "phone_number": null,
+    "skills": [],
+    "work_experience": [],
+    "education": []
+  },
+  "confidence_score": 0.0,
+  "processing_time": 8.012553691864014,
+  "error": "RetryError[<Future at 0x7f6304722b90 state=finished raised FileNotFoundError>]",
+  "validation_status": "failed"
+}

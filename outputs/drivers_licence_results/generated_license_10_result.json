@@ -2,14 +2,14 @@
   "document_path": "./data/Drivers_licence/generated_license_10.png",
   "document_type": "driving_license",
   "extracted_data": {
-    "name": "Young Eric",
-    "date_of_birth": "1909-09-03",
+    "name": "Eric Young",
+    "date_of_birth": "2009-09-03",
     "license_number": "10ZR9SSOL",
-    "issuing_state": null,
+    "issuing_state": "Ireland",
     "expiry_date": "2020-10-20"
   },
-  "confidence_score": 80.0,
-  "processing_time": 7.058645248413086,
+  "confidence_score": 100.0,
+  "processing_time": 8.982384204864502,
   "error": null,
   "validation_status": "success"
 }

@@ -1,0 +1,15 @@
+{
+  "document_path": "./data/Drivers_licence/generated_license_1003.png",
+  "document_type": "driving_license",
+  "extracted_data": {
+    "name": "Christina Sullivan",
+    "date_of_birth": "1953-06-17",
+    "license_number": "000279653",
+    "issuing_state": "Ireland",
+    "expiry_date": "2057-11-14"
+  },
+  "confidence_score": 100.0,
+  "processing_time": 22.46966290473938,
+  "error": null,
+  "validation_status": "success"
+}

@@ -1,0 +1,46 @@
+{
+  "document_path": "./data/shop_receipts/14.jpg",
+  "document_type": "shop_receipt",
+  "extracted_data": {
+    "merchant_name": "Walmart",
+    "total_amount": 26.6,
+    "date_of_purchase": "2017-05-04",
+    "items": [
+      {
+        "name": "EQUATE LINER",
+        "quantity": 1,
+        "price": 3.88
+      },
+      {
+        "name": "VFUS ENG POM",
+        "quantity": 1,
+        "price": 7.48
+      },
+      {
+        "name": "DAWN ORIG",
+        "quantity": 1,
+        "price": 5.97
+      },
+      {
+        "name": "50YD PKGTAPE",
+        "quantity": 1,
+        "price": 1.12
+      },
+      {
+        "name": "50YD PKGTAPE",
+        "quantity": 1,
+        "price": 1.12
+      },
+      {
+        "name": "LINT ROLLER2",
+        "quantity": 1,
+        "price": 5.78
+      }
+    ],
+    "payment_method": "DEBIT"
+  },
+  "confidence_score": 100.0,
+  "processing_time": 19.455480337142944,
+  "error": null,
+  "validation_status": "success"
+}

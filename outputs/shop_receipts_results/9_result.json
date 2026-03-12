@@ -1,0 +1,176 @@
+{
+  "document_path": "./data/shop_receipts/9.jpg",
+  "document_type": "shop_receipt",
+  "extracted_data": {
+    "merchant_name": "WinCo FOODS",
+    "total_amount": 121.92,
+    "date_of_purchase": "2014-09-08",
+    "items": [
+      {
+        "name": "N/YORK TX GRLC",
+        "quantity": 1,
+        "price": 2.18
+      },
+      {
+        "name": "CHICKEN WINGS",
+        "quantity": 1,
+        "price": 5.39
+      },
+      {
+        "name": "PICSWEET BLEND",
+        "quantity": 2,
+        "price": 1.34
+      },
+      {
+        "name": "PICSWEET GREENS",
+        "quantity": 2,
+        "price": 1.28
+      },
+      {
+        "name": "CHICKEN WINGS",
+        "quantity": 1,
+        "price": 5.48
+      },
+      {
+        "name": "DIET LN GRND B",
+        "quantity": 1,
+        "price": 10.87
+      },
+      {
+        "name": "PORK LOIN CHOP",
+        "quantity": 1,
+        "price": 9.91
+      },
+      {
+        "name": "DRUMSTICKS",
+        "quantity": 1,
+        "price": 5.32
+      },
+      {
+        "name": "EYE RND STK FP",
+        "quantity": 1,
+        "price": 8.39
+      },
+      {
+        "name": "EYE RND STK FP",
+        "quantity": 1,
+        "price": 8.24
+      },
+      {
+        "name": "BEEF FOR STEW",
+        "quantity": 1,
+        "price": 10.48
+      },
+      {
+        "name": "PORK 1/2 LOIN",
+        "quantity": 1,
+        "price": 8.12
+      },
+      {
+        "name": "B/BEST S STEAK",
+        "quantity": 1,
+        "price": 1.0
+      },
+      {
+        "name": "BAR S MEAT FRNK",
+        "quantity": 1,
+        "price": 0.88
+      },
+      {
+        "name": "O/M HAM",
+        "quantity": 1,
+        "price": 3.99
+      },
+      {
+        "name": "WINCO NOODLES",
+        "quantity": 2,
+        "price": 0.84
+      },
+      {
+        "name": "TNDRBRD CHIX BR",
+        "quantity": 1,
+        "price": 5.98
+      },
+      {
+        "name": "KRFT DELUXE MAC",
+        "quantity": 1,
+        "price": 3.64
+      },
+      {
+        "name": "EGGO WAFFLE",
+        "quantity": 1,
+        "price": 1.96
+      },
+      {
+        "name": "L/D NUTTY BARS",
+        "quantity": 1,
+        "price": 1.25
+      },
+      {
+        "name": "L/D OATML CRM",
+        "quantity": 1,
+        "price": 1.25
+      },
+      {
+        "name": "LINKS MILD",
+        "quantity": 1,
+        "price": 5.78
+      },
+      {
+        "name": "KEEB TOWNHOUSE",
+        "quantity": 1,
+        "price": 1.98
+      },
+      {
+        "name": "TURKEY FRANK",
+        "quantity": 1,
+        "price": 0.88
+      },
+      {
+        "name": "RESERS POT SLD",
+        "quantity": 1,
+        "price": 0.98
+      },
+      {
+        "name": "DM SPAG SAUCE",
+        "quantity": 1,
+        "price": 0.71
+      },
+      {
+        "name": "HUNTS MANWICH",
+        "quantity": 2,
+        "price": 0.82
+      },
+      {
+        "name": "DM PNAPL CHNKY",
+        "quantity": 2,
+        "price": 0.98
+      },
+      {
+        "name": "SUNBEAN BUNS",
+        "quantity": 1,
+        "price": 1.98
+      },
+      {
+        "name": "WINCO SNDWCH WT",
+        "quantity": 1,
+        "price": 0.91
+      },
+      {
+        "name": "WINCO HOMO MILK",
+        "quantity": 1,
+        "price": 2.48
+      },
+      {
+        "name": "EGGS",
+        "quantity": 1,
+        "price": 1.37
+      }
+    ],
+    "payment_method": null
+  },
+  "confidence_score": 80.0,
+  "processing_time": 22.713359355926514,
+  "error": null,
+  "validation_status": "success"
+}

@@ -1,0 +1,53 @@
+{
+  "document_path": "./data/Resume/50616851-6852.jpg",
+  "document_type": "resume",
+  "extracted_data": {
+    "full_name": "Robert I. Garver, Jr.",
+    "email": null,
+    "phone_number": null,
+    "skills": null,
+    "work_experience": [
+      {
+        "company": "Johns Hopkins Hospital",
+        "role": "Intern in Medicine",
+        "dates": "1981-82"
+      },
+      {
+        "company": "Johns Hopkins Hospital",
+        "role": "Resident in Medicine",
+        "dates": "1982-84"
+      },
+      {
+        "company": "National Heart, Lung, and Blood Institute",
+        "role": "Senior Staff Fellow, Pulmonary Branch",
+        "dates": "1984-87"
+      },
+      {
+        "company": "National Heart, Lung, and Blood Institute",
+        "role": "Clinical Chief, Pulmonary Branch",
+        "dates": "1987"
+      },
+      {
+        "company": "University of Alabama School of Medicine",
+        "role": "Assistant Professor of Medicine, Division of Pulmonary and Critical Care Medicine",
+        "dates": "1988-"
+      }
+    ],
+    "education": [
+      {
+        "institution": "Boston University",
+        "degree": "B.A. in Biology",
+        "graduation_year": 1977
+      },
+      {
+        "institution": "Johns Hopkins University",
+        "degree": "M.D. in Medicine",
+        "graduation_year": 1981
+      }
+    ]
+  },
+  "confidence_score": 50.0,
+  "processing_time": 13.41930603981018,
+  "error": null,
+  "validation_status": "success"
+}

@@ -1,0 +1,136 @@
+{
+  "document_path": "./data/Resume/85655567_85655583.jpg",
+  "document_type": "resume",
+  "extracted_data": {
+    "full_name": "Edward A. Gaensler",
+    "email": null,
+    "phone_number": null,
+    "skills": [
+      "Phi Beta Kappa",
+      "Alpha Omega Alpha",
+      "Henry D. Chadwick Medal",
+      "State License: Massachusetts",
+      "Diplomate: National Board of Medical Examiners",
+      "Diplomate: American Board of Surgery",
+      "Diplomate: The Board of Thoracic Surgery"
+    ],
+    "work_experience": [
+      {
+        "company": "Boston City Hospital",
+        "role": "Intern, General Surgery, 4th Surgical Service",
+        "dates": "1945 - 1946"
+      },
+      {
+        "company": "Boston City Hospital",
+        "role": "Jr. Asst. Resident, 4th Surgical Service",
+        "dates": "1946 - 1947"
+      },
+      {
+        "company": "Boston City Hospital",
+        "role": "Asst. Resident, Thoracic Surgery Service",
+        "dates": "1947 - 1948"
+      },
+      {
+        "company": "Sanatorium Division of Boston City Hospital",
+        "role": "Asst. Resident, Thoracic Surgery Service",
+        "dates": "1948 - 1949"
+      },
+      {
+        "company": "Sanatorium Division of Boston City Hospital",
+        "role": "Chief Resident, Thoracic Surgery Service",
+        "dates": "1949 - 1950"
+      },
+      {
+        "company": "U. S. Public Health Service",
+        "role": "Research Fellow",
+        "dates": "1949 - 1951"
+      },
+      {
+        "company": "Thorndike Memorial Laboratory, Boston City Hospital",
+        "role": "Research Associate",
+        "dates": "1951 - 1960"
+      },
+      {
+        "company": "Edward Livingston Trudeau Fellowship",
+        "role": "Fellow",
+        "dates": "1955 - 1959"
+      },
+      {
+        "company": "National Heart Institute, U.S.P.H.S.",
+        "role": "Research Career Award",
+        "dates": "1964 -"
+      },
+      {
+        "company": "Boston University School of Medicine",
+        "role": "Asst. In Surgery",
+        "dates": "1948 - 1952"
+      },
+      {
+        "company": "Boston University School of Medicine",
+        "role": "Instructor in Surgery",
+        "dates": "1953 - 1960"
+      },
+      {
+        "company": "Boston University School of Medicine",
+        "role": "Associate Professor in Surgery",
+        "dates": "1960 - 1965"
+      },
+      {
+        "company": "Boston University School of Medicine",
+        "role": "Professor of Surgery",
+        "dates": "1965 -"
+      },
+      {
+        "company": "Boston University School of Medicine",
+        "role": "Professor of Physiology",
+        "dates": "1973 -"
+      },
+      {
+        "company": "Harvard Medical School",
+        "role": "Asst. in Medicine",
+        "dates": "1950 - 1953"
+      },
+      {
+        "company": "Harvard Medical School",
+        "role": "Instructor in Surgery",
+        "dates": "1953 - 1956"
+      },
+      {
+        "company": "Harvard Medical School",
+        "role": "Associate in Surgery",
+        "dates": "1956 - 1960"
+      },
+      {
+        "company": "Harvard Medical School",
+        "role": "Lecturer on Surgery",
+        "dates": "1961 -"
+      },
+      {
+        "company": "Tufts University School of Medicine",
+        "role": "Instructor in Medicine",
+        "dates": "1955 - 1960"
+      },
+      {
+        "company": "Tufts University School of Medicine",
+        "role": "Lecturer in Medicine",
+        "dates": "1960 -"
+      }
+    ],
+    "education": [
+      {
+        "institution": "Haverford College",
+        "degree": "B.S.",
+        "graduation_year": 1942
+      },
+      {
+        "institution": "Harvard Medical School",
+        "degree": "M.D.",
+        "graduation_year": 1945
+      }
+    ]
+  },
+  "confidence_score": 66.66666666666666,
+  "processing_time": 19.00227403640747,
+  "error": null,
+  "validation_status": "success"
+}

@@ -1,0 +1,15 @@
+{
+  "document_path": "./data/Drivers_licence/generated_license_1014.png",
+  "document_type": "driving_license",
+  "extracted_data": {
+    "name": "Christian Allen",
+    "date_of_birth": "1987-02-29",
+    "license_number": "USHW43501A3P",
+    "issuing_state": "Ireland",
+    "expiry_date": "2022-04-24"
+  },
+  "confidence_score": 100.0,
+  "processing_time": 17.046751737594604,
+  "error": null,
+  "validation_status": "success"
+}

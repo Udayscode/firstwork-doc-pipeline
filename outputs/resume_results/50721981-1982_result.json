@@ -1,0 +1,152 @@
+{
+  "document_path": "./data/Resume/50721981-1982.jpg",
+  "document_type": "resume",
+  "extracted_data": {
+    "full_name": "Syed S. Ahmad",
+    "email": null,
+    "phone_number": null,
+    "skills": [
+      "Thrombosis Research",
+      "Biochemistry",
+      "Chemistry",
+      "Botany",
+      "Zoology",
+      "Pharmacology",
+      "Hematology",
+      "Molecular Biology",
+      "Haemostasis",
+      "Medicine",
+      "Clinical Research",
+      "Experimental Therapeutics",
+      "Physiology"
+    ],
+    "work_experience": [
+      {
+        "company": "Jinnah Postgraduate Medical Center, Karachi, Pakistan",
+        "role": "Research Associate, Department of Ophthalmology",
+        "dates": "1972-1973"
+      },
+      {
+        "company": "University of Karachi, Karachi, Pakistan",
+        "role": "Research Associate, Department of Pharmacology",
+        "dates": "1973-1975"
+      },
+      {
+        "company": "Jinnah Postgraduate Medical Center, Karachi, Pakistan",
+        "role": "Lecturer, Department of Ophthalmology",
+        "dates": "1973-1975"
+      },
+      {
+        "company": "St. Elizabeth Hospital, Elizabeth, NJ",
+        "role": "Clinical Clerkship (Medicine)",
+        "dates": "1979-1983"
+      },
+      {
+        "company": "The Elizabeth General Hospital",
+        "role": "Clinical Clerkship (Pediatrics)",
+        "dates": "1979-1983"
+      },
+      {
+        "company": "General Hospital Cd. Juarez, Mexico",
+        "role": "Clinical Clerkship (Surgery)",
+        "dates": "1979-1983"
+      },
+      {
+        "company": "Dow Medical College, Karachi, Pakistan",
+        "role": "Clinical Clerkship (Surgery)",
+        "dates": "1979-1983"
+      },
+      {
+        "company": "St. Elizabeth Hospital, Elizabeth, NJ",
+        "role": "Clinical Clerkship (Psychiatry)",
+        "dates": "1979-1983"
+      },
+      {
+        "company": "Temple University Hospital, Philadelphia, PA",
+        "role": "Clinical Clerkship (Ob/Gyn)",
+        "dates": "1979-1983"
+      },
+      {
+        "company": "Temple University Hospital, Philadelphia, PA",
+        "role": "Clinical Clerkship (Medicine Electives)",
+        "dates": "1979-1983"
+      },
+      {
+        "company": "University of Juarez Cd. Juarez, Mexico",
+        "role": "Intern",
+        "dates": "1979-1983"
+      },
+      {
+        "company": "Scheie Eye Institute, Presbyterian University of Pennsylvania Medical Center, Philadelphia, PA",
+        "role": "Research Assistant",
+        "dates": "1975-1976"
+      },
+      {
+        "company": "University of Pennsylvania",
+        "role": "Predoctoral Fellow, Department of Pharmacology and Chemistry",
+        "dates": "1976-1978"
+      },
+      {
+        "company": "NIH, National Research Award, Thrombosis Research Center, Temple University School of Medicine",
+        "role": "Research Associate, Department of Lung and Blood Institute",
+        "dates": "1978-1979"
+      },
+      {
+        "company": "NIH, National Research Award, Thrombosis Research Center, Temple University School of Medicine",
+        "role": "Postdoctoral Fellow, National Heart, Lung and Blood Institute",
+        "dates": "1979-1981"
+      },
+      {
+        "company": "University of Pennsylvania",
+        "role": "Assistant Professor, Department of Pharmacology and Chemistry",
+        "dates": "1983-1984"
+      },
+      {
+        "company": "Thrombosis Research Center, Temple University School of Medicine",
+        "role": "Research Associate",
+        "dates": "1984-1985"
+      },
+      {
+        "company": "Thrombosis Research Center, Temple University School of Medicine",
+        "role": "Research Associate Professor",
+        "dates": "1985-1991"
+      },
+      {
+        "company": "The Sol Sherry Thrombosis Research Center and Biochemistry Department, Temple University School of Medicine, Philadelphia, PA",
+        "role": "Research Associate Professor",
+        "dates": "1991-Present"
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Karachi, Pakistan",
+        "degree": "BS & BS (Hon)",
+        "graduation_year": 1970
+      },
+      {
+        "institution": "University of Karachi, Pakistan",
+        "degree": "MS",
+        "graduation_year": 1971
+      },
+      {
+        "institution": "University of Karachi, Pakistan & Univ. of PA, Phila., PA",
+        "degree": "PhD & Thesis",
+        "graduation_year": 1979
+      },
+      {
+        "institution": "Temple Univ., Thromb. Res. Ctr., Phila.",
+        "degree": "Postdoc Fel.",
+        "graduation_year": 1979
+      },
+      {
+        "institution": "Univ. Autonoma de Cd. Juarez, Mexico",
+        "degree": "MD",
+        "graduation_year": 1983
+      }
+    ]
+  },
+  "confidence_score": 66.66666666666666,
+  "processing_time": 35.96833777427673,
+  "error": null,
+  "validation_status": "success"
+}

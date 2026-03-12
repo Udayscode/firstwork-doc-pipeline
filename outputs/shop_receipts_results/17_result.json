@@ -1,0 +1,83 @@
+{
+  "document_path": "./data/shop_receipts/17.jpg",
+  "document_type": "shop_receipt",
+  "extracted_data": {
+    "merchant_name": "Walmart",
+    "total_amount_without_tax": 36.35,
+    "total_amount": 38.68,
+    "tax": 2.33,
+    "date_of_purchase": "2017-01-15",
+    "items": [
+      {
+        "name": "BANANAS",
+        "quantity": 1,
+        "price": 0.95
+      },
+      {
+        "name": "BEVERAGE",
+        "quantity": 1,
+        "price": 2.0
+      },
+      {
+        "name": "OS CRAN POM",
+        "quantity": 1,
+        "price": 2.0
+      },
+      {
+        "name": "STRWBRY CC",
+        "quantity": 1,
+        "price": 0.96
+      },
+      {
+        "name": "CAMPARI TOM",
+        "quantity": 1,
+        "price": 2.98
+      },
+      {
+        "name": "KFI ENGLSH",
+        "quantity": 1,
+        "price": 3.98
+      },
+      {
+        "name": "HARD SALAMI",
+        "quantity": 1,
+        "price": 3.43
+      },
+      {
+        "name": "AVOCADO",
+        "quantity": 1,
+        "price": 1.76
+      },
+      {
+        "name": "RT 1 FOR",
+        "quantity": 4,
+        "price": 0.11
+      },
+      {
+        "name": "PILLS WHITE",
+        "quantity": 1,
+        "price": 1.0
+      },
+      {
+        "name": "SH NYLON COL",
+        "quantity": 1,
+        "price": 2.97
+      },
+      {
+        "name": "HAND CLEANER",
+        "quantity": 1,
+        "price": 1.67
+      },
+      {
+        "name": "INJECTR CLNR",
+        "quantity": 1,
+        "price": 8.87
+      }
+    ],
+    "payment_method": "Cash"
+  },
+  "confidence_score": 100.0,
+  "processing_time": 21.145982265472412,
+  "error": null,
+  "validation_status": "success"
+}

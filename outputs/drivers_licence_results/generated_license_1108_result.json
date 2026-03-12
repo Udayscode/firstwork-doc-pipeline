@@ -1,15 +1,15 @@
 {
-  "document_path": "./data/Drivers_licence/generated_license_1108.png",
+  "document_path": "./data/driving_licence/generated_license_1108.png",
   "document_type": "driving_license",
   "extracted_data": {
-    "name": "Pollard James",
+    "name": "James Pollard",
     "date_of_birth": "1984-09-16",
     "license_number": "JU7BTX591FJU",
-    "issuing_state": null,
-    "expiry_date": null
+    "issuing_state": "Ireland",
+    "expiry_date": "2006-07-28"
   },
-  "confidence_score": 60.0,
-  "processing_time": 7.368260145187378,
+  "confidence_score": 100.0,
+  "processing_time": 12.606593608856201,
   "error": null,
   "validation_status": "success"
 }

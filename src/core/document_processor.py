@@ -26,7 +26,7 @@ class DocumentProcessor:
         """Initialize with Gemini API key"""
         self.api_key = api_key
         genai.configure(api_key=api_key)
-        self.model = genai.GenerativeModel('gemini-1.5-flash')
+        self.model = genai.GenerativeModel('gemini-2.5-flash')
         self.image_processor = ImageProcessor()
         self.prompt_manager = PromptManager()
         
@@ -40,6 +40,8 @@ class DocumentProcessor:
             return DocumentType.SHOP_RECEIPT
         elif 'resumes' in path_parts:
             return DocumentType.RESUME
+        elif 'marksheets' in path_parts or 'marksheet' in path_parts:
+            return DocumentType.MARKSHEET
         else:
             # Fallback: try to detect from filename
             filename = Path(file_path).name.lower()
@@ -49,6 +51,8 @@ class DocumentProcessor:
                 return DocumentType.SHOP_RECEIPT
             elif 'resume' in filename or 'cv' in filename:
                 return DocumentType.RESUME
+            elif 'marksheet' in filename or 'grade' in filename or 'transcript' in filename:
+                return DocumentType.MARKSHEET
             
         return DocumentType.RESUME  # Default fallback
     
@@ -88,11 +92,15 @@ class DocumentProcessor:
         try:
             # Prepare image
             image = Image.open(image_path)
+
+            # OCR text
+            # ocr_text = self.image_processor.extract_text(image_path)
             
             # Call Gemini
             response = self.model.generate_content([prompt, image])
             
             if response.text:
+                logger.info("Gemini API call succeeded.")
                 return response.text.strip()
             else:
                 raise ValueError("Empty response from Gemini")

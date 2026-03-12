@@ -2,6 +2,6 @@ google-generativeai
 Pillow
 PyMuPDF
 opencv-python
-tesseract
+pytesseract
 numpy
 tenacity

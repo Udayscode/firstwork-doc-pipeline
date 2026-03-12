@@ -1,0 +1,15 @@
+{
+  "document_path": "./data/driving_licence/generated_license_1071.png",
+  "document_type": "driving_license",
+  "extracted_data": {
+    "name": "Douglas Linda",
+    "date_of_birth": "2001-07-09",
+    "license_number": "QKPAZGD77K",
+    "issuing_state": "IRELAND",
+    "expiry_date": "2023-06-25"
+  },
+  "confidence_score": 100.0,
+  "processing_time": 8.463287353515625,
+  "error": null,
+  "validation_status": "success"
+}

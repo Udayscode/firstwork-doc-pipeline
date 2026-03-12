@@ -1,0 +1,58 @@
+{
+  "document_path": "./data/Resume/50583715-3716.jpg",
+  "document_type": "resume",
+  "extracted_data": {
+    "full_name": "Peter G. Traber",
+    "email": null,
+    "phone_number": null,
+    "skills": null,
+    "work_experience": [
+      {
+        "company": "Northwestern University, Chicago, Illinois",
+        "role": "Internship",
+        "dates": "1981-1982"
+      },
+      {
+        "company": "Northwestern University, Chicago, Illinois",
+        "role": "Residency (Internal Medicine)",
+        "dates": "1982-1984"
+      },
+      {
+        "company": "Northwestern University, Chicago, Illinois",
+        "role": "Fellowship (Gastroenterology)",
+        "dates": "1984-1986"
+      },
+      {
+        "company": "University of Michigan, Ann Arbor, Michigan",
+        "role": "Research Fellow",
+        "dates": "1986-1987"
+      },
+      {
+        "company": "University of Michigan, Ann Arbor, Michigan",
+        "role": "Instructor",
+        "dates": "1987-1988"
+      },
+      {
+        "company": "University of Michigan, Ann Arbor, Michigan",
+        "role": "Assistant Professor",
+        "dates": "1989"
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Michigan, Ann Arbor, MI",
+        "degree": "B.S.",
+        "graduation_year": 1977
+      },
+      {
+        "institution": "Wayne State University, Detroit, MI",
+        "degree": "M.D.",
+        "graduation_year": 1981
+      }
+    ]
+  },
+  "confidence_score": 50.0,
+  "processing_time": 17.03016185760498,
+  "error": null,
+  "validation_status": "success"
+}

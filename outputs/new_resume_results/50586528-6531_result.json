@@ -1,0 +1,74 @@
+{
+  "document_path": "./data/Resume/50586528-6531.jpg",
+  "document_type": "resume",
+  "extracted_data": {
+    "full_name": "YOAV I. HENIS",
+    "email": null,
+    "phone_number": null,
+    "skills": [
+      "Cell membrane research",
+      "Biophysical methods",
+      "Fluorescence photobleaching recovery",
+      "Video image-intensification microscopy",
+      "Biochemistry",
+      "Neurobiochemistry",
+      "Protein interactions",
+      "Receptor properties",
+      "Research",
+      "Teaching"
+    ],
+    "work_experience": [
+      {
+        "company": "Israel Defence Forces",
+        "role": "Lieutenant",
+        "dates": "1968-1971"
+      },
+      {
+        "company": "Department of Biological Chemistry, The Institute of Life Sciences, Hebrew University of Jerusalem",
+        "role": "Research and teaching assistant",
+        "dates": "1974-1978"
+      },
+      {
+        "company": "Department of Biological Chemistry, Washington University School of Medicine, St. Louis, MO",
+        "role": "Postdoctoral training/research associate",
+        "dates": "1978-1981"
+      },
+      {
+        "company": "Department of Biochemistry, Unit of Neurobiochemistry, Tel Aviv University",
+        "role": "Lecturer",
+        "dates": "1981-1985"
+      },
+      {
+        "company": "Department of Biochemistry, Unit of Neurobiochemistry, Tel Aviv University",
+        "role": "Senior Lecturer",
+        "dates": "1985-1988"
+      },
+      {
+        "company": "Whitehead Institute for Biomedical Research (M.I.T.)",
+        "role": "Visiting Scientist",
+        "dates": "1987-1988"
+      },
+      {
+        "company": "Department of Biochemistry, Unit of Neurobiochemistry, Tel Aviv University",
+        "role": "Associate Professor",
+        "dates": "1988-present"
+      }
+    ],
+    "education": [
+      {
+        "institution": "Hebrew University of Jerusalem",
+        "degree": "B.Sc. (Chemistry and Biochemistry)",
+        "graduation_year": 1974
+      },
+      {
+        "institution": "Hebrew University of Jerusalem",
+        "degree": "Ph.D. (Biological Chemistry)",
+        "graduation_year": 1978
+      }
+    ]
+  },
+  "confidence_score": 66.66666666666666,
+  "processing_time": 15.181494951248169,
+  "error": null,
+  "validation_status": "success"
+}

@@ -1,0 +1,106 @@
+{
+  "document_path": "./data/shop_receipts/1.jpg",
+  "document_type": "shop_receipt",
+  "extracted_data": {
+    "merchant_name": "TRADER JOE'S",
+    "total_amount": 38.68,
+    "date_of_purchase": "2014-06-28",
+    "items": [
+      {
+        "name": "R-CARROTS SHREDDED 10 OZ",
+        "quantity": 1,
+        "price": 1.29
+      },
+      {
+        "name": "R-CUCUMBERS PERSIAN 1 LB",
+        "quantity": 1,
+        "price": 1.99
+      },
+      {
+        "name": "TOMATOES CRUSHED NO SALT",
+        "quantity": 1,
+        "price": 1.59
+      },
+      {
+        "name": "TOMATOES WHOLE NO SALT W/BASIL",
+        "quantity": 1,
+        "price": 1.59
+      },
+      {
+        "name": "ORGANIC OLD FASHIONED OATMEAL",
+        "quantity": 1,
+        "price": 2.69
+      },
+      {
+        "name": "MINI-PEARL TOMATOES",
+        "quantity": 1,
+        "price": 2.49
+      },
+      {
+        "name": "PKG SHREDDED MOZZARELLA LITE",
+        "quantity": 1,
+        "price": 3.99
+      },
+      {
+        "name": "EGGS 1 DOZ ORGANIC BROWN",
+        "quantity": 1,
+        "price": 3.79
+      },
+      {
+        "name": "BEANS GARBANZO",
+        "quantity": 1,
+        "price": 0.89
+      },
+      {
+        "name": "SPROUTED CA STYLE",
+        "quantity": 1,
+        "price": 2.99
+      },
+      {
+        "name": "A-AVOCADOS HASS BAG 4CT",
+        "quantity": 1,
+        "price": 3.99
+      },
+      {
+        "name": "A-APPLE BAG JAZZ 2 LB",
+        "quantity": 1,
+        "price": 2.99
+      },
+      {
+        "name": "A-PEPPER BELL EACH XL RED",
+        "quantity": 1,
+        "price": 0.99
+      },
+      {
+        "name": "GROCERY NON TAXABLE",
+        "quantity": 2,
+        "price": 0.49
+      },
+      {
+        "name": "BANANAS ORGANIC",
+        "quantity": 3,
+        "price": 0.29
+      },
+      {
+        "name": "CREAMY SALTED PEANUT BUTTER",
+        "quantity": 1,
+        "price": 2.49
+      },
+      {
+        "name": "WHL WHT PITA BREAD",
+        "quantity": 1,
+        "price": 1.69
+      },
+      {
+        "name": "GROCERY NON TAXABLE",
+        "quantity": 2,
+        "price": 0.69
+      }
+    ],
+    "payment_method": "CASH"
+  },
+  "confidence_score": 100.0,
+  "processing_time": 68.49588227272034,
+  "error": null,
+  "validation_status": "success"
+}

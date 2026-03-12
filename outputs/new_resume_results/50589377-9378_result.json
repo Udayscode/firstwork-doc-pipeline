@@ -1,0 +1,68 @@
+{
+  "document_path": "./data/Resume/50589377-9378.jpg",
+  "document_type": "resume",
+  "extracted_data": {
+    "full_name": "Anna T. Meadows",
+    "email": null,
+    "phone_number": null,
+    "skills": [],
+    "work_experience": [
+      {
+        "company": "Children's Hsp. of PA.",
+        "role": "Director, Div. of Onc. & Children's Cancer Research Ctr",
+        "dates": "1989"
+      },
+      {
+        "company": "Univ. of PA, School of Medicine, Philadelphia",
+        "role": "Professor of Pediatrics",
+        "dates": "1985"
+      },
+      {
+        "company": "Univ. of PA, School of Medicine, Philadelphia",
+        "role": "Assoc. Prof. of Pediatrics",
+        "dates": "1980-85"
+      },
+      {
+        "company": "Children's Hospital of Philadelphia",
+        "role": "Senior Physician, Dept. of Medicine",
+        "dates": "1979"
+      },
+      {
+        "company": "Children's Hospital of Philadelphia",
+        "role": "Assoc. Physician, Dept. of Medicine",
+        "dates": "1976-79"
+      },
+      {
+        "company": "University of PA, School of Medicine, Philadelphia",
+        "role": "Asst. Prof. of Pediatrics",
+        "dates": "1975-80"
+      },
+      {
+        "company": "Children's Hospital of Philadelphia",
+        "role": "Asst. Physician, Dept. of Medicine",
+        "dates": "1974-76"
+      }
+    ],
+    "education": [
+      {
+        "institution": "Queens College, Flushing, NY",
+        "degree": "B.A. Liberal Arts",
+        "graduation_year": 1952
+      },
+      {
+        "institution": "New York University, New York, NY",
+        "degree": "M.A. Psychology",
+        "graduation_year": 1953
+      },
+      {
+        "institution": "Medical College of PA, Philadelphia, PA",
+        "degree": "M.D. Medicine",
+        "graduation_year": 1969
+      }
+    ]
+  },
+  "confidence_score": 66.66666666666666,
+  "processing_time": 24.08615469932556,
+  "error": null,
+  "validation_status": "success"
+}

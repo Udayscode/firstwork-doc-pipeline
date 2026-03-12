@@ -1,0 +1,68 @@
+{
+  "document_path": "./data/Resume/50597708-7709.jpg",
+  "document_type": "resume",
+  "extracted_data": {
+    "full_name": "Ih-Chang Hsu",
+    "email": null,
+    "phone_number": null,
+    "skills": [],
+    "work_experience": [
+      {
+        "company": "University of Wisconsin, Madison, Wisconsin",
+        "role": "Research Assistant, Department of Biochemistry",
+        "dates": "1968-1972"
+      },
+      {
+        "company": "University of Wisconsin, Madison, Wisconsin",
+        "role": "Research Associate, Department of Pathology",
+        "dates": "1972-1975"
+      },
+      {
+        "company": "Oak Ridge National Laboratory, Biology Division",
+        "role": "Research Fellow in Cancer Program",
+        "dates": "1975-1977"
+      },
+      {
+        "company": "National Cancer Institute, National Institutes of Health, Bethesda, Maryland",
+        "role": "Expert Investigator, Division of Cancer Cause and Prevention",
+        "dates": "1977-1981"
+      },
+      {
+        "company": "University of Maryland School of Medicine, Baltimore, Maryland",
+        "role": "Associate Professor, Department of Pathology",
+        "dates": "1981-present"
+      },
+      {
+        "company": "University of Maryland Cancer Center, University of Maryland Medical System, Baltimore, Maryland",
+        "role": "Member",
+        "dates": "1984-present"
+      },
+      {
+        "company": "Laboratory of Human Carcinogenesis, NCI, NIH, Bethesda, Maryland",
+        "role": "Visiting Scientist (IPA appointment)",
+        "dates": "Jan 1988-June 1989"
+      }
+    ],
+    "education": [
+      {
+        "institution": "Kaohsiung Medical College",
+        "degree": "B.S.",
+        "graduation_year": 1964
+      },
+      {
+        "institution": "National Taiwan University",
+        "degree": "M.S.",
+        "graduation_year": 1967
+      },
+      {
+        "institution": "University of Wisconsin",
+        "degree": "Ph.D.",
+        "graduation_year": 1972
+      }
+    ]
+  },
+  "confidence_score": 66.66666666666666,
+  "processing_time": 9.934497594833374,
+  "error": null,
+  "validation_status": "success"
+}

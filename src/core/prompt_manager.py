@@ -43,12 +43,14 @@ class PromptManager:
 
                 Focus on:
                 - Store/merchant name (not address)
+                - Total amount without including the taxes
                 - Final total amount as number
+                - Total tax amount
                 - Purchase date in YYYY-MM-DD format
                 - Individual items with names, quantities, and prices
                 - Payment method (cash, card, etc.)
 
-                For items array, include each product with quantity and unit price.
+                For items array, include each different product with quantity and unit price and if similar just calculate collective price of them and quantity.
                 Return only valid JSON without markdown formatting.
                 """,
             
@@ -65,6 +67,27 @@ class PromptManager:
                 - Education with institution, degree, and graduation year
 
                 For arrays, ensure proper JSON structure. Use null for missing data.
+                Return only valid JSON without markdown formatting.
+                """,
+
+            DocumentType.MARKSHEET: f"""
+                Extract the following information from this academic marksheet/grade report:
+                {json.dumps(schema, indent=2)}
+
+                Focus on:
+                - Exact student name and roll/enrollment number
+                - Institution and exam/board name
+                - Exam date in YYYY-MM-DD format
+                - Each subject with marks obtained, maximum marks, and grade if present
+                - Compute total_marks as the sum of subject marks if not explicitly shown
+                - Compute percentage as (total_obtained / total_maximum) * 100 if not present
+                - Result status (e.g., PASS/FAIL/COMPARTMENT), use null if unclear
+
+                Notes:
+                - Prefer numeric values; remove symbols like % or / unless part of names
+                - If grades are letters (A, B+), keep as strings; if GPA given, map to percentage only if clearly provided, otherwise leave as null
+                - Ignore watermark text and non-relevant captions
+
                 Return only valid JSON without markdown formatting.
                 """
         }

@@ -40,3 +40,202 @@
 2025-06-23 15:55:17,400 - src.core.document_processor - INFO - Detected document type: shop_receipt
 2025-06-23 15:58:06,123 - src.core.document_processor - INFO - Processing document: ./data/shop_receipts/10.jpg
 2025-06-23 15:58:06,125 - src.core.document_processor - INFO - Detected document type: shop_receipt
+2025-06-23 23:14:54,341 - src.core.document_processor - INFO - Processing document: ./data/Resume/50597708-7709.jpg
+2025-06-23 23:14:54,342 - src.core.document_processor - INFO - Detected document type: resume
+2025-06-24 08:55:52,803 - src.core.document_processor - INFO - Processing document: ./data/Resume/50597708-7709.jpg
+2025-06-24 08:55:52,804 - src.core.document_processor - INFO - Detected document type: resume
+2025-06-24 08:55:55,454 - src.core.document_processor - ERROR - Gemini API call failed: 400 API Key not found. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API Key not found. Please pass a valid API key."
+]
+2025-06-24 08:56:01,476 - src.core.document_processor - ERROR - Gemini API call failed: 400 API Key not found. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API Key not found. Please pass a valid API key."
+]
+2025-06-24 08:56:07,340 - src.core.document_processor - ERROR - Gemini API call failed: 400 API Key not found. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API Key not found. Please pass a valid API key."
+]
+2025-06-24 08:56:07,341 - src.core.document_processor - ERROR - Error processing ./data/Resume/50597708-7709.jpg: RetryError[<Future at 0x7fc1a8c261a0 state=finished raised InvalidArgument>]
+2025-06-24 08:58:52,317 - src.core.document_processor - INFO - Processing document: ./data/Resume/50597708-7709.jpg
+2025-06-24 08:58:52,319 - src.core.document_processor - INFO - Detected document type: resume
+2025-06-24 08:58:55,990 - src.core.document_processor - ERROR - Gemini API call failed: 400 API Key not found. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API Key not found. Please pass a valid API key."
+]
+2025-06-24 12:40:12,215 - src.core.document_processor - INFO - Processing document: ./data/Resume/50597708-7709.jpg
+2025-06-24 12:40:12,216 - src.core.document_processor - INFO - Detected document type: resume
+2025-06-24 12:40:22,149 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-06-24 12:42:53,443 - src.core.document_processor - INFO - Processing document: ./data/Resume/85655567_85655583.jpg
+2025-06-24 12:42:53,445 - src.core.document_processor - INFO - Detected document type: resume
+2025-06-24 12:43:12,445 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-06-24 12:46:08,168 - src.core.document_processor - INFO - Processing document: ./data/Resume/50721981-1982.jpg
+2025-06-24 12:46:08,169 - src.core.document_processor - INFO - Detected document type: resume
+2025-06-24 12:46:44,109 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-06-24 12:51:07,108 - src.core.document_processor - INFO - Processing document: ./data/shop_receipts/14.jpg
+2025-06-24 12:51:07,108 - src.core.document_processor - INFO - Detected document type: shop_receipt
+2025-06-24 12:51:26,562 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-06-24 12:55:29,356 - src.core.document_processor - INFO - Processing document: ./data/shop_receipts/9.jpg
+2025-06-24 12:55:29,357 - src.core.document_processor - INFO - Detected document type: shop_receipt
+2025-06-24 12:55:52,069 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-06-24 13:00:16,000 - src.core.document_processor - INFO - Processing document: ./data/shop_receipts/1.jpg
+2025-06-24 13:00:16,000 - src.core.document_processor - INFO - Detected document type: shop_receipt
+2025-06-24 13:01:24,490 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-06-24 13:06:33,871 - src.core.document_processor - INFO - Processing document: ./data/Drivers_licence/generated_license_1071.png
+2025-06-24 13:06:33,872 - src.core.document_processor - INFO - Detected document type: driving_license
+2025-06-24 13:06:46,758 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-06-24 13:08:53,857 - src.core.document_processor - INFO - Processing document: ./data/Drivers_licence/generated_license_1014.png
+2025-06-24 13:08:53,858 - src.core.document_processor - INFO - Detected document type: driving_license
+2025-06-24 13:09:10,903 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-06-24 13:10:52,691 - src.core.document_processor - INFO - Processing document: ./data/Drivers_licence/generated_license_1003.png
+2025-06-24 13:10:52,692 - src.core.document_processor - INFO - Detected document type: driving_license
+2025-06-24 13:11:15,159 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-06-24 13:12:30,305 - src.core.document_processor - INFO - Processing document: ./data/Drivers_licence/generated_license_1.png
+2025-06-24 13:12:30,307 - src.core.document_processor - INFO - Detected document type: driving_license
+2025-06-24 13:12:42,876 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-06-24 13:13:44,581 - src.core.document_processor - INFO - Processing document: ./data/Drivers_licence/generated_license_10.png
+2025-06-24 13:13:44,583 - src.core.document_processor - INFO - Detected document type: driving_license
+2025-06-24 13:13:53,562 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-06-24 13:17:31,647 - src.core.document_processor - INFO - Processing document: ./data/Drivers_licence/generated_license_1108.png
+2025-06-24 13:17:31,648 - src.core.document_processor - INFO - Detected document type: driving_license
+2025-06-24 13:18:12,328 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-06-24 13:49:12,797 - src.core.document_processor - INFO - Processing document: ./data/Drivers_licence/generated_license_1108.png
+2025-06-24 13:49:12,798 - src.core.document_processor - INFO - Detected document type: driving_license
+2025-06-24 13:49:36,603 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-06-24 13:51:12,184 - src.core.document_processor - INFO - Processing document: ./data/Drivers_licence/generated_license_1.png
+2025-06-24 13:51:12,185 - src.core.document_processor - INFO - Detected document type: driving_license
+2025-06-24 13:51:25,355 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-06-27 12:13:28,907 - src.core.document_processor - INFO - Processing document: ./data/50616851-6852.jpg
+2025-06-27 12:13:28,907 - src.core.document_processor - INFO - Detected document type: resume
+2025-06-27 12:13:28,908 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/50616851-6852.jpg'
+2025-06-27 12:13:32,913 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/50616851-6852.jpg'
+2025-06-27 12:13:36,918 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/50616851-6852.jpg'
+2025-06-27 12:13:36,919 - src.core.document_processor - ERROR - Error processing ./data/50616851-6852.jpg: RetryError[<Future at 0x7f023580e7d0 state=finished raised FileNotFoundError>]
+2025-06-27 12:15:01,903 - src.core.document_processor - INFO - Processing document: ./data/50630631-0632.jpg
+2025-06-27 12:15:01,903 - src.core.document_processor - INFO - Detected document type: resume
+2025-06-27 12:15:01,904 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/50630631-0632.jpg'
+2025-06-27 12:15:05,909 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/50630631-0632.jpg'
+2025-06-27 12:15:09,914 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/50630631-0632.jpg'
+2025-06-27 12:15:09,915 - src.core.document_processor - ERROR - Error processing ./data/50630631-0632.jpg: RetryError[<Future at 0x7feb5fbca6b0 state=finished raised FileNotFoundError>]
+2025-06-27 12:15:50,411 - src.core.document_processor - INFO - Processing document: ./data/Resume/50616851-6852.jpg
+2025-06-27 12:15:50,412 - src.core.document_processor - INFO - Detected document type: resume
+2025-06-27 12:16:03,830 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-06-27 16:24:15,014 - src.core.document_processor - INFO - Processing document: ./data/Drivers_licence/generated_licence_0.png
+2025-06-27 16:24:15,027 - src.core.document_processor - INFO - Detected document type: resume
+2025-06-27 16:24:15,030 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/Drivers_licence/generated_licence_0.png'
+2025-06-27 16:24:19,035 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/Drivers_licence/generated_licence_0.png'
+2025-06-27 16:24:23,040 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/Drivers_licence/generated_licence_0.png'
+2025-06-27 16:24:23,040 - src.core.document_processor - ERROR - Error processing ./data/Drivers_licence/generated_licence_0.png: RetryError[<Future at 0x7f471ec0e890 state=finished raised FileNotFoundError>]
+2025-06-27 16:26:29,115 - src.core.document_processor - INFO - Processing document: ./data/Drivers_licence/generated_licence_0.pngclear
+2025-06-27 16:26:29,115 - src.core.document_processor - INFO - Detected document type: resume
+2025-06-27 16:26:29,116 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/Drivers_licence/generated_licence_0.pngclear'
+2025-06-27 16:26:57,516 - src.core.document_processor - INFO - Processing document: ./data/shop_receipts/20.png
+2025-06-27 16:26:57,516 - src.core.document_processor - INFO - Detected document type: shop_receipt
+2025-06-27 16:27:17,991 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-06-27 16:39:41,012 - src.core.document_processor - INFO - Processing document: ./data/shop_receipts/20.png
+2025-06-27 16:39:41,012 - src.core.document_processor - INFO - Detected document type: shop_receipt
+2025-06-27 16:39:52,214 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-06-27 16:41:28,799 - src.core.document_processor - INFO - Processing document: ./data/shop_receipts/17.jpg
+2025-06-27 16:41:28,799 - src.core.document_processor - INFO - Detected document type: shop_receipt
+2025-06-27 16:41:48,470 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-06-27 16:47:25,193 - src.core.document_processor - INFO - Processing document: ./data/shop_receipts/17.jpg
+2025-06-27 16:47:25,194 - src.core.document_processor - INFO - Detected document type: shop_receipt
+2025-06-27 16:47:46,338 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-06-27 16:49:54,530 - src.core.document_processor - INFO - Processing document: ./data/Drivers_licence/generated_licence_0.png
+2025-06-27 16:49:54,531 - src.core.document_processor - INFO - Detected document type: resume
+2025-06-27 16:49:54,531 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/Drivers_licence/generated_licence_0.png'
+2025-06-27 16:49:58,536 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/Drivers_licence/generated_licence_0.png'
+2025-06-27 16:50:02,541 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/Drivers_licence/generated_licence_0.png'
+2025-06-27 16:50:02,542 - src.core.document_processor - ERROR - Error processing ./data/Drivers_licence/generated_licence_0.png: RetryError[<Future at 0x7f841f76a9b0 state=finished raised FileNotFoundError>]
+2025-06-27 16:52:51,531 - src.core.document_processor - INFO - Processing document: ./data/Drivers_licence/generated_licence_1.png
+2025-06-27 16:52:51,532 - src.core.document_processor - INFO - Detected document type: resume
+2025-06-27 16:52:51,532 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/Drivers_licence/generated_licence_1.png'
+2025-06-27 16:52:55,537 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/Drivers_licence/generated_licence_1.png'
+2025-06-27 16:53:19,760 - src.core.document_processor - INFO - Processing document: ./data/drivers_licence/generated_licence_0.png
+2025-06-27 16:53:19,761 - src.core.document_processor - INFO - Detected document type: resume
+2025-06-27 16:53:19,762 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/drivers_licence/generated_licence_0.png'
+2025-06-27 16:53:23,766 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/drivers_licence/generated_licence_0.png'
+2025-06-27 16:53:27,770 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/drivers_licence/generated_licence_0.png'
+2025-06-27 16:53:27,770 - src.core.document_processor - ERROR - Error processing ./data/drivers_licence/generated_licence_0.png: RetryError[<Future at 0x7fd4d0c12b30 state=finished raised FileNotFoundError>]
+2025-06-27 16:53:53,626 - src.core.document_processor - INFO - Processing document: ./data/drivers_licence/generated_licence_1.png
+2025-06-27 16:53:53,627 - src.core.document_processor - INFO - Detected document type: resume
+2025-06-27 16:53:53,628 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/drivers_licence/generated_licence_1.png'
+2025-06-27 16:53:57,629 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/drivers_licence/generated_licence_1.png'
+2025-06-27 16:54:01,634 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/drivers_licence/generated_licence_1.png'
+2025-06-27 16:54:01,635 - src.core.document_processor - ERROR - Error processing ./data/drivers_licence/generated_licence_1.png: RetryError[<Future at 0x7fdb06e628c0 state=finished raised FileNotFoundError>]
+2025-06-27 16:55:44,387 - src.core.document_processor - INFO - Processing document: ./data/driving_licence/generated_licence_1.png
+2025-06-27 16:55:44,389 - src.core.document_processor - INFO - Detected document type: resume
+2025-06-27 16:55:44,390 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/driving_licence/generated_licence_1.png'
+2025-06-27 16:55:48,395 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/driving_licence/generated_licence_1.png'
+2025-06-27 16:55:52,399 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/driving_licence/generated_licence_1.png'
+2025-06-27 16:55:52,399 - src.core.document_processor - ERROR - Error processing ./data/driving_licence/generated_licence_1.png: RetryError[<Future at 0x7f6304722b90 state=finished raised FileNotFoundError>]
+2025-06-27 16:59:00,807 - src.core.document_processor - INFO - Processing document: ./data/driving_licence/generated_license_1.png
+2025-06-27 16:59:00,807 - src.core.document_processor - INFO - Detected document type: driving_license
+2025-06-27 16:59:00,808 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/driving_licence/generated_license_1.png'
+2025-06-27 16:59:04,813 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/driving_licence/generated_license_1.png'
+2025-06-27 16:59:08,818 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/driving_licence/generated_license_1.png'
+2025-06-27 16:59:08,819 - src.core.document_processor - ERROR - Error processing ./data/driving_licence/generated_license_1.png: RetryError[<Future at 0x7fe4007469e0 state=finished raised FileNotFoundError>]
+2025-06-27 17:48:49,971 - src.core.document_processor - INFO - Processing document: ./data/driving_licence/generated_license_1.png
+2025-06-27 17:48:49,974 - src.core.document_processor - INFO - Detected document type: driving_license
+2025-06-27 17:48:49,974 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/driving_licence/generated_license_1.png'
+2025-06-27 17:48:53,979 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/driving_licence/generated_license_1.png'
+2025-06-27 17:48:57,984 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/driving_licence/generated_license_1.png'
+2025-06-27 17:48:57,985 - src.core.document_processor - ERROR - Error processing ./data/driving_licence/generated_license_1.png: RetryError[<Future at 0x7f8e490de380 state=finished raised FileNotFoundError>]
+2025-06-27 17:56:01,876 - src.core.document_processor - INFO - Processing document: ./data/driving_licence/generated_license_1.png
+2025-06-27 17:56:01,876 - src.core.document_processor - INFO - Detected document type: driving_license
+2025-06-27 17:56:16,570 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-06-27 18:07:06,723 - src.core.document_processor - INFO - Processing document: ./data/driving_licence/generated_license_1.png
+2025-06-27 18:07:06,724 - src.core.document_processor - INFO - Detected document type: driving_license
+2025-06-27 18:07:21,469 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-06-27 18:07:58,111 - src.core.document_processor - INFO - Processing document: ./data/driving_licence/generated_license_0.png
+2025-06-27 18:07:58,112 - src.core.document_processor - INFO - Detected document type: driving_license
+2025-06-27 18:08:14,258 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-06-27 18:09:58,085 - src.core.document_processor - INFO - Processing document: ./data/driving_licence/generated_license_0.png
+2025-06-27 18:09:58,086 - src.core.document_processor - INFO - Detected document type: driving_license
+2025-06-27 18:10:13,707 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-06-27 18:10:54,295 - src.core.document_processor - INFO - Processing document: ./data/driving_licence/generated_license_1071.png
+2025-06-27 18:10:54,297 - src.core.document_processor - INFO - Detected document type: driving_license
+2025-06-27 18:11:02,757 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-06-27 18:11:22,511 - src.core.document_processor - INFO - Processing document: ./data/driving_licence/generated_license_1108.png
+2025-06-27 18:11:22,511 - src.core.document_processor - INFO - Detected document type: driving_license
+2025-06-27 18:11:35,117 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-06-29 14:20:32,184 - src.core.document_processor - INFO - Processing document: ./data/driving_licence/generated_licence_0.png
+2025-06-29 14:20:32,184 - src.core.document_processor - INFO - Detected document type: resume
+2025-06-29 14:20:32,185 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/driving_licence/generated_licence_0.png'
+2025-06-29 14:20:36,190 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/driving_licence/generated_licence_0.png'
+2025-06-29 14:20:40,196 - src.core.document_processor - ERROR - Gemini API call failed: [Errno 2] No such file or directory: './data/driving_licence/generated_licence_0.png'
+2025-06-29 14:20:40,197 - src.core.document_processor - ERROR - Error processing ./data/driving_licence/generated_licence_0.png: RetryError[<Future at 0x7fe655ffaa70 state=finished raised FileNotFoundError>]
+2025-06-29 14:21:04,607 - src.core.document_processor - INFO - Processing document: ./data/driving_licence/generated_license_0.png
+2025-06-29 14:21:04,608 - src.core.document_processor - INFO - Detected document type: driving_license
+2025-06-29 14:21:23,728 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-06-29 14:34:09,343 - src.core.document_processor - INFO - Processing document: ./data/driving_licence/generated_license_1.png
+2025-06-29 14:34:09,343 - src.core.document_processor - INFO - Detected document type: driving_license
+2025-09-11 23:56:04,288 - src.core.document_processor - INFO - Processing document: ./data/Resume/50583715-3716.jpg
+2025-09-11 23:56:04,289 - src.core.document_processor - INFO - Detected document type: resume
+2025-09-11 23:56:21,317 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-09-12 10:09:27,109 - src.core.document_processor - INFO - Processing document: ./data/Resume/50586528-6531.jpg
+2025-09-12 10:09:27,111 - src.core.document_processor - INFO - Detected document type: resume
+2025-09-12 10:09:42,290 - src.core.document_processor - INFO - Gemini API call succeeded.
+2025-09-12 10:12:59,960 - src.core.document_processor - INFO - Processing document: ./data/Resume/50589377-9378.jpg
+2025-09-12 10:12:59,961 - src.core.document_processor - INFO - Detected document type: resume
+2025-09-12 10:13:24,046 - src.core.document_processor - INFO - Gemini API call succeeded.
