@@ -1,5 +1,10 @@
-.env
+venv_new/
 __pycache__/
-outputs/json/
 *.pyc
-.DS_Store
+*.log
+data/
+outputs/
+*.whl
+*.Zone.Identifier
+.env
+.env.example
